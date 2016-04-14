@@ -25,8 +25,9 @@ sendMessageDelayed(Message,long)
 
 1，传递Message。用于接受子线程发送的数据, 并用此数据配合主线程更新UI。
 
-          在Android中，对于UI的操作通常需要放在主线程中进行操作。如果在子线程中有关于UI的操作，
-          那么就需要把数据消息作为一个Message对象发送到消息队列中，然后，用Handler中的handlerMessge方法处理传过来的数据信息，并操作UI。类sendMessage(Message msg)方法实现发送消息的操作。 在初始化Handler对象时重写的handleMessage方法来接收Messgae并进行相关操作。
+    在Android中，对于UI的操作通常需要放在主线程中进行操作。如果在子线程中有关于UI的操作，
+那么就需要把数据消息作为一个Message对象发送到消息队列中，然后，用Handler中的handlerMessge方法处理传过来的数据信息，并操作UI。
+类sendMessage(Message msg)方法实现发送消息的操作。 在初始化Handler对象时重写的handleMessage方法来接收Messgae并进行相关操作。
 
   2，传递Runnable对象。用于通过Handler绑定的消息队列，安排不同操作的执行顺序。
 
